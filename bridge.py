@@ -5,7 +5,7 @@ X32_IP = "192.168.1.10"                     # Match your X32 IP
 X32_PORT = 10023                            # Default port X32 uses for OSC
 IAC_NAME_FRONT = "IAC Driver"               # Requirement
 IAC_NAME = "X32-Bridge"                     # Match your IAC bus name
-IAC_BUS = f"{IAC_NAME_FRONT} {IAC_NAME}"    # variable concatenation
+IAC_BUS = f"{IAC_NAME_FRONT} {IAC_NAME}"    # variable concatenation for complete IAC bus name
 
 client = udp_client.SimpleUDPClient(X32_IP, X32_PORT)
 
