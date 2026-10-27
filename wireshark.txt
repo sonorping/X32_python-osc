@@ -20,3 +20,11 @@ Change it from the default (typically empty or 8000) to include 10023.
 If there are other ports listed, separate them with a comma (e.g., 8000, 10023).
 
 Click OK.
+
+**********************
+
+The Wireshark capture filter for OSC
+udp port 10023 and host 192.168.1.50      #match the X32 IP address
+
+**********************
+
