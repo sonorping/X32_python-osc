@@ -1,0 +1,49 @@
+By default, Wireshark does not automatically bind UDP port 10023 to its built-in OSC dissector, which causes X32 traffic to appear as generic "UDP" data rather than parsed OSC bundles and messages.
+
+You can configure Wireshark to decode port 10023 as OSC either dynamically per session or permanently in your global settings.
+
+Method 1: Decode As... (Quickest, Session-Based)
+Use this method if you already have a capture running or an open .pcap file:
+
+Right-click any packet sent to or from the X32 on port 10023 in the packet list.
+
+Select Decode As... from the contextual menu.
+
+In the dialog window that appears:
+
+Field: Verify it is set to UDP port.
+
+Value: Verify it displays 10023.
+
+Current: Click the drop-down menu, scroll to or type OSC, and select Open Sound Control.
+
+Click OK (or Save).
+
+The protocol column immediately updates from UDP to OSC, and expanding the packet tree will now break down:
+
+OSC Message / Bundle header
+
+OSC Address: (e.g., /-action/loadscene or /xremote)
+
+OSC Type Tag: (e.g., ,i for integer)
+
+OSC Arguments: (e.g., 2 for Scene 3)
+
+Method 2: Permanent Preferences Mapping (Persists Across Restarts)
+To ensure Wireshark decodes port 10023 as OSC every time you launch it:
+
+Open Wireshark settings:
+
+Press Cmd + , (or go to Wireshark > Preferences...).
+
+Expand the Protocols menu in the left sidebar.
+
+Scroll down alphabetically and click on OSC.
+
+Locate the field labeled OSC UDP Ports:
+
+Change it from the default (typically empty or 8000) to include 10023.
+
+If there are other ports listed, separate them with a comma (e.g., 8000, 10023).
+
+Click OK.
