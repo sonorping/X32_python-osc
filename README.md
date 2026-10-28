@@ -1,6 +1,9 @@
 # X32_python-osc
 Converting MainStage program change midi commands into OSC cue change commands for the X32
 
+``` TODO LIST ```
+```# line 59, the description of what to do needs to be updated ```
+
 **************************************************
 
 The X32 listens for OSC on port 10023 by default. 
@@ -45,7 +48,7 @@ X32_PORT = 10023
 
 client = udp_client.SimpleUDPClient(X32_IP, X32_PORT)
 
-# Listen to the virtual IAC bus
+``` # Listen to the virtual IAC bus ```
 with mido.open_input('IAC Driver Bus 1') as inport:
     print("Listening for MainStage MIDI on IAC Driver Bus 1...")
     for msg in inport:
@@ -55,6 +58,7 @@ with mido.open_input('IAC Driver Bus 1') as inport:
             print(f"Loaded X32 Scene: {scene_index + 1} (Sent value: {scene_index})")
             
 Step 4: Configure MainStage Patch Settings
+
 In MainStage, select your Patch in the left sidebar.
 Open the Patch Settings inspector at the bottom.
 Select the MIDI Out tab.
