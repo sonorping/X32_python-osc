@@ -136,6 +136,10 @@ Run the script:
 To run it in future sessions, just navigate to the folder and activate the environment:
 
   Bash
+  
   cd ~/x32-bridge
+  
   source env/bin/activate
+  
   python3 bridge.py
+  
