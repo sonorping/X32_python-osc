@@ -3,6 +3,7 @@ Converting MainStage program change midi commands into OSC cue change commands f
 
 ``` TODO LIST ```
 ```# line 59, the description of what to do needs to be updated ```
+```# convert to plain text```
 
 **************************************************
 
