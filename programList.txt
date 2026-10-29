@@ -1,3 +1,4 @@
 wireshark
 midi monitor
 Hi Lloyd
+# command completion installs
